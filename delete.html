@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="mystyle.css">
+<script type="text/javascript">
+function valid(){
+	var mid=document.frm.mid.value;
+	if(mid==""){
+		alert("Enter member id");
+		return false;
+		}
+}
+</script>
+
+</head>
+<body>
+<table class="center">
+<tr><td>
+<ul>
+  <li><a  href="adminhome.html">Home</a></li>
+  <li><a href="showmembers.jsp">Members</a></li>
+  <li><a href="delete.html">Delete Member</a></li>
+  <li><a href="index.html">Logout</a></li>
+</ul>
+</td></tr>
+</table>
+<form name="frm" action="Delete" onsubmit="return valid()">
+<table border="1" class="center">
+<tr><td>Enter Member ID :</td><td><input type="text" name="mid"></td></tr>
+<tr><td colspan="2"><input type="submit" value="Delete"></td></tr>
+</table>
+
+</form>
+
+</body>
+</html>

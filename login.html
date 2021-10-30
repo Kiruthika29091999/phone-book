@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="mystyle.css" >
+<script type="text/javascript">
+function valid(){
+	var id= document.frm.id.value;
+	var pass= document.frm.pass.value;
+	if(id==""){
+		alert("Enter login id");
+		return false;
+		}
+	else if(pass==""){
+		alert("Enter password");
+		return false;
+		}
+}
+</script>
+</head>
+<body>
+<form name="frm" action="UserLog" onsubmit="return valid()">
+
+<table style="border: solid;border-color: red;background-color: cyan" class="center">
+<tr><th colspan="2">User Login</th></tr>
+<tr><th colspan="2"><img src="image/ulog.jpg"></th></tr>
+<tr><td>Enter LoginId</td><td><input type="text" name="id"></td></tr>
+<tr><td>Enter password</td><td><input type="password" name="pass"></td></tr>
+<tr><td colspan="2"><input type="submit" value="Login"></td></tr>
+<tr><td><a href="index.html">Back</a></td></tr>
+</table>
+</form>
+
+</body>
+</html>

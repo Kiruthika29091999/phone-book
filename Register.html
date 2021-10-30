@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="mystyle.css">
+<script type="text/javascript">
+function valid(){
+	var cpass=document.frm.cpass;
+	var cname=document.frm.cname;
+	var cadr=document.frm.cadr;
+	var cphn=document.frm.cphn;
+	var cmail=document.frm.cmail;
+
+	if(cpass.value==""){
+		alert("Enter password");
+		return false;
+		}
+	else if(cpass.value.length<=6){
+		alert("password must be greater than 6 char");
+		return false;
+		}
+	else if(cname.value==""){
+		alert("name cannot be blank");
+		return false;
+		}
+	else if(cadr.value==""){
+		alert("Address cannot be blank");
+		return false;
+		}
+	else if(cphn.value==""){
+		alert("phone cannot be blank");
+		return false;
+		}
+	else if(cphn.value.length!=10){
+			alert("Please check number");
+			return false;
+		}
+	else if(isNaN(cphn.value)){
+		alert("Invalid number");
+		return false;
+		}
+	else if(cmail.value==""){
+		alert("Enter mail id");
+		return false;
+		}
+	
+}
+
+</script>
+
+</head>
+<body>
+
+<table class="center">
+<tr><td>
+<ul>
+  <li><a  href="index.html">Home</a></li>
+  <li><a href="login.html">Login</a></li>
+  <li><a href="Register.html">Register</a></li>
+ </ul>
+</td></tr>
+</table>
+
+<form name="frm" action="Regis" onsubmit="return valid()">
+<table class="center">
+<tr><th colspan="2"> <img src="image/regpic.jpg" height="200 width="200"></th></tr>
+<tr><td>Enter password :</td><td><input type="password" name="cpass"></td></tr>
+<tr><td>Enter Name:</td><td><input type="text" name="cname"></td></tr>
+<tr><td>Enter Address:</td><td><input type="text" name="cadr"></td></tr>
+<tr><td>Enter Phone Number:</td><td><input type="text" name="cphn"></td></tr>
+<tr><td>Enter Email:</td><td><input type="text" name="cmail"></td></tr>
+<tr><th colspan="2"><input type="submit" value="Register"></th></tr>
+</table>
+</form>
+
+</body>
+</html>
